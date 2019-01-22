@@ -1,0 +1,5 @@
+<?php
+
+roasted_preprocess_maintenance_page(&$variables) {
+	print_r($variables);
+}

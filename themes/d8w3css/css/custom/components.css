@@ -1,0 +1,306 @@
+/* Global Menus */
+.ul-parent,
+.ul-child,
+.li-item {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.ul-parent:before,
+.ul-parent:after {
+  content: " ";
+  display: table;
+}
+.ul-parent:after {
+  clear: both;
+}
+.ul-parent > li > a {
+  z-index: 200;
+}
+.ul-parent ul > li > a {
+  z-index: 300;
+}
+.ul-parent ul ul > li > a {
+  z-index: 400;
+}
+ul .ul-child.show {
+  /* display: block; */
+  background-color: inherit;
+}
+.ul-parent a:hover {
+  opacity: 1;
+}
+.ul-parent li {
+  position: relative;
+  text-align: left;
+}
+.ul-parent > li {
+  display: inline-block;
+  float: left;
+}
+.ul-parent li a.tMenu {
+  transition: background .3s ease;
+}
+.right-arrow,
+.dropdown-arrow {
+  font-family: FontAwesome;
+  padding-left: 5px;
+  font-size: 93%;
+  text-align: right;
+  display: inline-block;
+}
+.ul-parent li  ul {
+  min-width: 160px;
+  display: none;
+}
+.ul-parent li li a {
+  display: block;
+  position: relative;
+}
+.toggle-parent,
+.toggle-child {
+  cursor: pointer!important;
+}
+.ul-parent li a {
+  display: block;
+  text-align: left;
+}
+/* Vertical/Horizontal Main Menu */
+.main-navigation-wrapper a {
+  z-index: 3000;
+}
+.main-navigation-wrapper {
+  z-index: 100;
+}
+.main-navigation-wrapper .ul-parent a {
+  width: 100%;
+}
+/* Vertical Menus */
+#main-navigation-v {
+  display: none;
+  width: auto!important;
+}
+#main-navigation-v #close-nav {
+  width: 100%;
+}
+.ul-responsive-v .ul-parent .ul-child,
+#main-navigation-v .ul-parent .ul-child {
+  box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.2)!important;
+}
+.ul-responsive-v .ul-parent .li-expanded:hover > ul,
+.ul-responsive-v .ul-parent .li-expanded .li-expanded:hover > ul,
+#main-navigation-v .ul-parent .li-expanded:hover > ul,
+#main-navigation-v .ul-parent .li-expanded .li-expanded:hover > ul {
+  display: none;
+}
+.ul-responsive-v .ul-parent li,
+.ul-responsive-v .ul-parent li,
+#main-navigation-v .ul-parent a,
+#main-navigation-v .ul-parent a {
+  width: 100%;
+}
+.ul-responsive-v .ul-parent,
+.ul-responsive-v .ul-child,
+.ul-responsive-v .li-item {
+  clear: both!important;
+  float: left!important;
+}
+#main-navigation-v .ul-parent,
+#main-navigation-v .ul-child,
+#main-navigation-v .li-item {
+  min-width: 220px;
+  clear: both!important;
+  float: left!important;
+}
+.ul-responsive-v .ul-parent li ul,
+#main-navigation-v .ul-parent li ul {
+  position: relative;
+}
+.ul-responsive-v .ul-parent li .li-expanded:hover ul,
+#main-navigation-v .ul-parent li .li-expanded:hover ul {
+  left: 0;
+}
+.ul-responsive-v .ul-parent ul a,
+#main-navigation-v .ul-parent ul a {
+  padding-left: 35px!important;
+}
+.ul-responsive-v .ul-parent ul ul a,
+#main-navigation-v .ul-parent ul ul a {
+  padding-left: 50px!important;
+}
+#main-navigation-v .li-1 .toggle-child .right-arrow {
+  display: none;
+}
+.ul-responsive-v .li-1 .toggle-child,
+#main-navigation-v .li-1 .toggle-child {
+  width: auto;
+  clear: none;
+}
+#main-navigation-v .li-1 .toggle-child:after {
+  content: "\f078";
+  font-family: FontAwesome;
+  padding-left: 5px;
+  text-align: right;
+}
+#open-nav-inner {
+  width: 50px;
+  background-color: transparent!important;
+  margin: 10px 20px 0 0;
+}
+/* Header */
+.w3-fixed {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.w3-relative {
+  position: relative;
+  width: 100%;
+}
+/* Site Branding */
+.header-inner > div {
+  float: left;
+  width: auto;
+}
+/* Footer/Account Menu */
+.copyright-inner,
+.ul-parent-account,
+.ul-parent-footer {
+  font-family: 'Times New Roman', Times, serif;
+}
+.ul-parent-account li a,
+.ul-parent-footer li a {
+  padding: 7px 14px;
+}
+/* User Account Menu */
+.ul-parent-footer {
+  width: 100%;
+  clear: both;
+}
+/* Force the menu to stay button on small screen */
+/* Force the menu to stay in the center */
+.ul-parent-account li,
+.ul-parent-footer li {
+  float: none;
+  width: auto;
+  display: inline-block;
+}
+/* User Account Menu */
+.ul-parent-account {
+  float: right;
+  width: auto;
+}
+/* Table inside field */
+td.field-multiple-drag {
+  width: 50px;
+}
+a.tabledrag-handle .handle {
+  width: 25px;
+  height: 25px;
+}
+/* To roll the text around the image */
+.node .field--type-image {
+  float: left;
+  margin-bottom: 0;
+  margin-left: 0;
+  margin-right: 1em;
+  margin-top: 0;
+}
+div.item-list > ol.item-list > li article::after,
+div.item-list > ol.item-list > li article::before,
+.field--type-text::after,
+.field--type-text-with-summary::after,
+.field--type-text::before,
+.field--type-text-with-summary::before {
+  display: inline!important;
+}
+/* User picture on the node */
+.node__meta article.profile img {
+  width: 50px;
+  height: 50px;
+}
+/* node submited by tag */
+.node__meta div.node__submitted,
+.node__meta article.profile {
+  margin: 0;
+  padding: 0;
+}
+/* search bar */
+.w3-search-block-form {
+  position: relative;
+  width: 100%;
+  display: inline-block;
+}
+.w3-search-block-form > .form-type-search {
+  width: 70%;
+  float: left;
+}
+.w3-search-block-form > .form-submit {
+  width: 30%;
+  float: right;
+}
+.w3-search-block-form > .form-type-search input {
+  border-right: none!important;
+  text-indent: 20px;
+  background-color: transparent;
+}
+.w3-search-block-form > .form-type-search:before {
+  content: "\f002";
+  font-family: FontAwesome;
+  position: absolute;
+  top: 22px;
+  left: 25px;
+  background-color: transparent;
+}
+.w3-search-block-form > div,
+.w3-search-block-form > input {
+  margin: 5px auto!important;
+  display: inline-block;
+  font-family: Consolas, "courier new";
+}
+.w3-search-block-form > input {
+  font-family: FontAwesome;
+}
+/* label form in the footer */
+
+.footer-menu-inner form label {
+  text-align: left;
+  float: left;
+}
+/* ol list */
+ol {
+  display: block;
+}
+/* Search Page */
+.search-form .search-advanced:hover {
+  background-color: transparent!important;
+}
+article.node > h3.node__title {
+  float: left;
+}
+/* Submitted By pic */
+article.node > footer.node__meta {
+  float: right;
+  margin-top: 10px;
+}
+article.node > footer.node__meta > article,
+article.node > footer.node__meta > div {
+  display: inline-block;
+  float: left;
+}
+article.node > footer.node__meta .field--name-user-picture {
+  padding: 0!important;
+  margin: 4px 10px 0 0;
+}
+/* Pager */
+.pager__items li {
+  padding: 0;
+}
+.pager__items li a {
+  padding: 6px 12px;
+  display: inline-block;
+}
+.pager__items li.is-active a {
+  font-weight: bold;
+  font-size: 120%;
+}
